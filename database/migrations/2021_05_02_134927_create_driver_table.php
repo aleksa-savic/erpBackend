@@ -14,7 +14,7 @@ class CreateDriverTable extends Migration
     public function up()
     {
         Schema::create('driver', function (Blueprint $table) {
-            $table->id();
+            $table->id()->autoIncrement();
             $table->string('name');
             $table->string('surname');
             $table->string('jmbg');
