@@ -1,4 +1,11 @@
 <?php return array (
+  'brackets/admin-generator' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Brackets\\AdminGenerator\\AdminGeneratorServiceProvider',
+    ),
+  ),
   'facade/ignition' => 
   array (
     'providers' => 

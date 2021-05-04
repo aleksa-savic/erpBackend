@@ -32,7 +32,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'e798e95c586e20ad46db10bb8094bd41c7859f50',
+    'reference' => 'aff40760c3419a758079b003e1143215921b15b2',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -45,6 +45,24 @@ private static $installed = array (
       array (
       ),
       'reference' => '9cb795bf30988e8c96dd3c40623c48a877bc6714',
+    ),
+    'brackets/admin-generator' => 
+    array (
+      'pretty_version' => '6.1.0',
+      'version' => '6.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '15ae82f4cb2f2b1afe64e9ed74c41cacb9dee52e',
+    ),
+    'brackets/craftable-installer' => 
+    array (
+      'pretty_version' => 'v2.0.4',
+      'version' => '2.0.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8502c1f8b10d5d9cc07b4dbd9a2b52577ffb2f8f',
     ),
     'brick/math' => 
     array (
@@ -68,6 +86,42 @@ private static $installed = array (
       array (
         0 => '*',
       ),
+    ),
+    'doctrine/cache' => 
+    array (
+      'pretty_version' => '1.11.0',
+      'version' => '1.11.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'a9c1b59eba5a08ca2770a76eddb88922f504e8e0',
+    ),
+    'doctrine/dbal' => 
+    array (
+      'pretty_version' => '2.13.1',
+      'version' => '2.13.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c800380457948e65bbd30ba92cc17cda108bf8c9',
+    ),
+    'doctrine/deprecations' => 
+    array (
+      'pretty_version' => 'v0.5.3',
+      'version' => '0.5.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '9504165960a1f83cc1480e2be1dd0a0478561314',
+    ),
+    'doctrine/event-manager' => 
+    array (
+      'pretty_version' => '1.1.1',
+      'version' => '1.1.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '41370af6a30faa9dc0368c4a6814d596e81aba7f',
     ),
     'doctrine/inflector' => 
     array (
@@ -455,6 +509,15 @@ private static $installed = array (
       ),
       'reference' => 'a654897ad7f97aea9d7ef292803939798c4a02a4',
     ),
+    'laravel/helpers' => 
+    array (
+      'pretty_version' => 'v1.4.1',
+      'version' => '1.4.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'febb10d8daaf86123825de2cb87f789a3371f0ac',
+    ),
     'laravel/laravel' => 
     array (
       'pretty_version' => 'dev-main',
@@ -462,7 +525,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'e798e95c586e20ad46db10bb8094bd41c7859f50',
+      'reference' => 'aff40760c3419a758079b003e1143215921b15b2',
     ),
     'laravel/sail' => 
     array (
@@ -777,8 +840,8 @@ private static $installed = array (
     array (
       'provided' => 
       array (
-        0 => '1.0',
-        1 => '1.0.0',
+        0 => '1.0.0',
+        1 => '1.0',
       ),
     ),
     'psr/simple-cache' => 
