@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRateTable extends Migration
+class CreateMessagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateRateTable extends Migration
      */
     public function up()
     {
-        Schema::create('rate', function (Blueprint $table) {
-            $table->id()->autoIncrement();
-            $table->string('type');
-            $table->integer('base_rate');
-            $table->integer('rate_increment');
+        Schema::create('messages', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
+            $table->string('msg_content');
 
-            $table->timestamps('created_at');
+            $table->foreignId('driver_id')->constrained();
+            $table->foreignId('client_id')->constrained();
         });
     }
 
@@ -30,6 +30,6 @@ class CreateRateTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rate');
+        Schema::dropIfExists('messages');
     }
 }

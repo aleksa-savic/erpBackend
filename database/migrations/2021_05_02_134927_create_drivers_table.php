@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDriverTable extends Migration
+class CreateDriversTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateDriverTable extends Migration
      */
     public function up()
     {
-        Schema::create('driver', function (Blueprint $table) {
+        Schema::create('drivers', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->string('name');
             $table->string('surname');
@@ -23,10 +23,11 @@ class CreateDriverTable extends Migration
             $table->boolean('personalVehicle');
             $table->integer('balance');
 
-            $table->foreign('user_id')->references('id')->on('user');
-            $table->foreign('vehicle_id')->references('id')->on('vehicle');
+            /*foreign keys*/
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('vehicle_id')->constrained();
 
-            $table->timestamps('created_at');
+            $table->timestamps();
         });
     }
 
@@ -37,6 +38,6 @@ class CreateDriverTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('driver');
+        Schema::dropIfExists('drivers');
     }
 }

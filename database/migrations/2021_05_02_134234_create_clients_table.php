@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRideTable extends Migration
+class CreateClientsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,15 @@ class CreateRideTable extends Migration
      */
     public function up()
     {
-        Schema::create('ride', function (Blueprint $table) {
+        Schema::create('clients', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->string('starting_location');
-            $table->timestamp('starting_time');
-
+            $table->string('name');
+            $table->string('lastname');
             $table->timestamps();
+
+            /*foreign keys*/
+
+            $table->foreignId('user_id')->references('id')->on('users');
         });
     }
 
@@ -29,6 +32,6 @@ class CreateRideTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ride');
+        Schema::dropIfExists('clients');
     }
 }
